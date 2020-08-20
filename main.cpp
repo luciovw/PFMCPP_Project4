@@ -53,6 +53,55 @@ New/This/Pointers/References conclusion
  7) click the [run] button.  Clear up any errors or warnings as best you can.
  */
 
+/*
+your program should generate the following output EXACTLY.
+This includes the warnings.
+Use a service like https://www.diffchecker.com/diff to compare your output. 
+you'll learn to solve the conversion warnings in the next project part.
+
+18 warnings generated.
+FloatType add result=4
+FloatType subtract result=2
+FloatType multiply result=4
+FloatType divide result=0.25
+
+DoubleType add result=4
+DoubleType subtract result=2
+DoubleType multiply result=4
+DoubleType divide result=0.8
+
+IntType add result=4
+IntType subtract result=2
+IntType multiply result=4
+IntType divide result=1
+
+Chain calculation = 590
+New value of ft = (ft + 3.0f) * 1.5f / 5.0f = 0.975
+---------------------
+
+Initial value of dt: 0.8
+Initial value of it: 590
+Use of function concatenation (mixed type arguments) 
+New value of dt = (dt * it) / 5.0f + ft = 95.375
+---------------------
+
+Intercept division by 0 
+New value of it = it / 0 = error: integer division by zero is an error and will crash the program!
+590
+New value of ft = ft / 0 = warning: floating point division by zero!
+inf
+New value of dt = dt / 0 = warning: floating point division by zero!
+inf
+---------------------
+
+good to go!
+
+
+
+
+
+*/
+
 #include <iostream>
 
 int main()
@@ -111,53 +160,7 @@ int main()
     return 0;
 }
 
-/*
-your program should generate the following output.  
-Use a service like https://www.diffchecker.com/diff to compare your output. 
-you'll learn to solve the conversion warnings in the next project part.
 
-18 warnings generated.
-FloatType add result=4
-FloatType subtract result=2
-FloatType multiply result=4
-FloatType divide result=0.25
-
-DoubleType add result=4
-DoubleType subtract result=2
-DoubleType multiply result=4
-DoubleType divide result=0.8
-
-IntType add result=4
-IntType subtract result=2
-IntType multiply result=4
-IntType divide result=1
-
-Chain calculation = 590
-New value of ft = (ft + 3.0f) * 1.5f / 5.0f = 0.975
----------------------
-
-Initial value of dt: 0.8
-Initial value of it: 590
-Use of function concatenation (mixed type arguments) 
-New value of dt = (dt * it) / 5.0f + ft = 95.375
----------------------
-
-Intercept division by 0 
-New value of it = it / 0 = error: integer division by zero is an error and will crash the program!
-590
-New value of ft = ft / 0 = warning: floating point division by zero!
-inf
-New value of dt = dt / 0 = warning: floating point division by zero!
-inf
----------------------
-
-good to go!
-
-
-
-
-
-*/
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -313,43 +316,3 @@ int main()
 
     std::cout << "good to go!" << std::endl;
 }
-
-/*
-your program should generate the following output.  
-Use a service like https://www.diffchecker.com/diff to compare your output. 
-you should have no errors or warnings.
-
-
-clang++ -std=c++17 -Weverything -Wno-c++98-compat -Wno-missing-prototypes main.cpp && ./a.out
-result of ft.add(): 555.556
-result of ft.subtract(): -308.644
-result of ft.multiply(): 53345.3
-result of ft.divide(): 0.285712
-result of ft.add(): 4444.56
-result of ft.subtract(): 4444.56
-result of ft.multiply(): 0
-result of ft.divide(): 
-warning, floating point division by zero returns 'inf' !
-inf
-result of db.add(): 555.556
-result of db.subtract(): -308.644
-result of db.multiply(): 53345.3
-result of db.divide(): 0.285712
-result of db.add(): 123.456
-result of db.subtract(): 123.456
-result of db.multiply(): 0
-result of db.divide(): 
-warning, floating point division by zero returns 'inf' !
-inf
-result of i.add(): 30
-result of i.subtract(): -10
-result of i.multiply(): 200
-result of i.divide(): 0
-result of i.add(): 10
-result of i.subtract(): 10
-result of i.multiply(): 0
-result of i.divide(): error, integer division by zero will crash the program!
-returning lhs
-10
-good to go!
-*/
