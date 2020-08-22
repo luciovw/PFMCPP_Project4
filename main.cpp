@@ -160,7 +160,7 @@ struct DoubleType
 {
     double* value;
 
-    DoubleType(float hDVal) : value(new double (hDVal) ){}
+    DoubleType(double hDVal) : value(new double (hDVal) ){}
     ~DoubleType()
     {
         delete value;
