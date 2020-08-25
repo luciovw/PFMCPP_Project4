@@ -411,7 +411,7 @@ IntType& IntType::divide( int rhs )
     }
     else
     {
-    *value /= rhs;
+        *value /= rhs;
     }
     return *this;
 }
