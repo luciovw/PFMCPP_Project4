@@ -163,14 +163,12 @@ struct HeapA
 #include <iostream>
 #include <cmath>
 
-//fwd declaration no longer needed
-struct DoubleType;
 struct IntType;
+struct DoubleType;
 
 //class declaration
 struct FloatType
 {
-
     FloatType(float hFVal) : value(new float (hFVal) ){}
     ~FloatType()
     {
@@ -192,7 +190,6 @@ struct FloatType
 private:
     float* value;
     FloatType& powInternal( float val );
-
 };
 
 //======================================================
