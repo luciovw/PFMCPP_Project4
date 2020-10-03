@@ -262,17 +262,17 @@ struct Point
         return *this;
     }
 
-    Point& multiply( IntType& m )
+    const Point& multiply( IntType& m )
     {
         return multiply(static_cast<float>(m));
     }
     
-    Point& multiply( FloatType& m )
+    const Point& multiply( FloatType& m )
     {
         return multiply(static_cast<float>(m));
     }
     
-    Point& multiply( DoubleType& m )
+    const Point& multiply( DoubleType& m )
     {
         return multiply(static_cast<float>(m));
     }
