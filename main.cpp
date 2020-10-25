@@ -239,20 +239,20 @@ struct Numeric
 
     Numeric& operator+=( const Type rhs )
     {
-    *value += rhs;
-    return *this;
+        *value += rhs;
+        return *this;
     }
 
     Numeric& operator-=( const Type rhs )
     {
-    *value -= rhs;
-    return *this;
+        *value -= rhs;
+        return *this;
     }
 
     Numeric& operator*=( const Type rhs )
     {
-    *value *= rhs;
-    return *this;
+        *value *= rhs;
+        return *this;
     }
 
     template<typename DType>
@@ -278,7 +278,7 @@ struct Numeric
 
         else if (rhs < std::numeric_limits<Type>::epsilon())
         {
-            std::cout << "warning: floating point division by zero!" <<std::endl;           
+            std::cout << "warning: floating point division by zero!" <<std::endl; 
         }
 
         *value /= rhs;
@@ -424,6 +424,7 @@ struct Point
     } 
 
 private:
+
     float x{0}, y{0};
 };
 
