@@ -478,6 +478,9 @@ void part3()
 
     std::cout << "An operation followed by attempts to divide by 0, which are ignored and warns user: " << std::endl;
     std::cout << it << std::endl;
+
+    // std::cout << "An operation followed by attempts to divide by 0, which are ignored and warns user: " << std::endl;
+    // std::cout << ((((it*=(it))/=(0))/=(0.f))/=(0.0)) << std::endl;
     
     it *= static_cast<int> (ft);
     std::cout << "FloatType x IntType  =  " << it << std::endl;
