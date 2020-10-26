@@ -258,7 +258,7 @@ struct Numeric
     template<typename DType>
     Numeric& operator/=(const DType& rhs)
     {
-        if constexpr (std::is_same<Type, int>::value)
+        if constexpr (std::is_same<NumericType, int>::value)
         {
             if constexpr (std::is_same<DType, int>::value)
             {
@@ -268,19 +268,16 @@ struct Numeric
                     return *this;
                 }
             }
-            
             else if (rhs < std::numeric_limits<DType>::epsilon() )
             {
                 std::cout << "can't divide integers by zero!" <<std::endl;
                 return *this;   
             }    
         }
-
-        else if (rhs < std::numeric_limits<Type>::epsilon())
+        else if (rhs < std::numeric_limits<NumericType>::epsilon())
         {
             std::cout << "warning: floating point division by zero!" <<std::endl; 
         }
-
         *value /= rhs;
         return *this;   
     }
@@ -288,7 +285,7 @@ struct Numeric
 
     Numeric& pow( const Type& val )
     {
-        return powInternal( static_cast<Type> (val) );
+        return powInternal( val );
     }
 
     Numeric& apply(std::function<Numeric&(std::unique_ptr<Type>&)> func)
