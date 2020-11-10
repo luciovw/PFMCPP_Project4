@@ -14,13 +14,13 @@ Create a branch named Part9
  */
 
 
-#define JUCE_DECLARE_NON_COPYABLE(className) \
-            className (const className&) = delete;\
-            className& operator= (const className&) = delete;
+// #define JUCE_DECLARE_NON_COPYABLE(className) \
+//             className (const className&) = delete;\
+//             className& operator= (const className&) = delete;
 
-#define JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(className) \
-            JUCE_DECLARE_NON_COPYABLE(className) \
-            JUCE_LEAK_DETECTOR(className)
+// #define JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(className) \
+//             JUCE_DECLARE_NON_COPYABLE(className) \
+//             JUCE_LEAK_DETECTOR(className)
 
 
 /*
